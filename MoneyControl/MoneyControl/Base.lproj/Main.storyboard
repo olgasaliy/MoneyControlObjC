@@ -258,7 +258,7 @@
                                     <constraint firstAttribute="height" constant="70" id="6iJ-4k-liE"/>
                                 </constraints>
                             </scrollView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PgG-mi-djy">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.png" translatesAutoresizingMaskIntoConstraints="NO" id="PgG-mi-djy">
                                 <rect key="frame" x="15" y="146" width="164" height="164"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1248,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7L-6O-514" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378.4000000000001" y="783.95802098950526"/>
+            <point key="canvasLocation" x="-1478" y="845"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="bUN-4t-Vca">

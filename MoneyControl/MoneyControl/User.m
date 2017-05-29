@@ -147,9 +147,16 @@
 }
 
 -(NSArray *) returnAll {
-    return _records;
+    return [self sort:_records];
 }
 
+-(NSArray *) sort :(NSArray *) arr{
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"d"
+                                        ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+    return[arr sortedArrayUsingDescriptors:sortDescriptors];
+}
 
 
 - (BOOL)date:(NSDate*)date isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate
@@ -182,7 +189,7 @@
         if (r.category.type == income && [self date:r.d isBetweenDate:first andDate:today])
             [arr addObject:r];
     }
-    return arr;
+    return [self sort:arr];
 }
 
 -(NSUInteger)returnSum {
@@ -218,7 +225,7 @@
         if (r.category.type == outcome && [self date:r.d isBetweenDate:first andDate:today])
             [arr addObject:r];
     }
-    return arr;
+    return [self sort:arr];
 }
 
 -(void) addRecord: (Record*) record {

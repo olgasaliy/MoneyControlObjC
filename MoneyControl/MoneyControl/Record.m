@@ -11,11 +11,11 @@
 @implementation Record
 
 -(BOOL) ifImageIsNil {
-    return _img? NO: YES;
+    return _img ? NO: YES;
 }
 
 -(NSString *) isIncome {
-    return _category.isIncoming? @"Доход" : @"Расход";
+    return _category.isIncoming ? @"Доход" : @"Расход";
 }
 
 @end

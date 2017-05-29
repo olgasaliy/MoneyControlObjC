@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) NSString *date;
 @property (nonatomic, copy) NSDate *d;
-@property (nonatomic,copy) MyCategory *category;
+@property (nonatomic, copy) MyCategory *category;
 @property (nonatomic) NSUInteger price;
 //@property (copy, nonatomic) UIColor *color;
 @property (nonatomic, strong) NSString *descr;

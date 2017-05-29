@@ -29,12 +29,12 @@
 }
 
 - (IBAction)pressed:(id)sender {
-    
+    ((UIScrollView*)[self.parentViewController.view.subviews objectAtIndex:2]).scrollEnabled = NO;
     [self.pickerViewTextField becomeFirstResponder];
 }
 
 - (IBAction)hide:(id)sender {
-    
+    ((UIScrollView*)[self.parentViewController.view.subviews objectAtIndex:2]).scrollEnabled = YES;
     [self.pickerViewTextField resignFirstResponder];
     if (_titleBut) {
         [_label1 setHidden:NO];

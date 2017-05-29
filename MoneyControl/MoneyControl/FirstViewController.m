@@ -153,8 +153,8 @@ dismissViewController:(UIViewController *)viewController {
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"viewdidload");
-    _loginButton  = [[FBSDKLoginButton alloc] init];
-    _loginButton.hidden = YES;
+//    _loginButton  = [[FBSDKLoginButton alloc] init];
+//    _loginButton.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
