@@ -18,22 +18,17 @@
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource> {
     int key;
-
+    
 }
 
-
 @property (strong,nonatomic) IBOutlet UITableView *table;
-
-//@property (nonatomic,strong) NSMutableArray *recordsIncome;
-//@property (nonatomic,strong) NSMutableArray *recordsOutcome;
-//@property (nonatomic,strong) NSMutableArray *records;
 @property (nonatomic,strong) IBOutlet UIButton *fisrt;
 @property (nonatomic,strong) IBOutlet UIButton *second;
 @property (nonatomic,strong) IBOutlet UIButton *all;
 
 @end
 
-@implementation ViewController 
+@implementation ViewController
 
 - (void)prepareNavigationTitle
 {
@@ -41,7 +36,6 @@
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont systemFontOfSize:20.0];
     label.textAlignment = NSTextAlignmentLeft;
-   // label.textColor =[UIColor colorWithRed:0.127 green:0.127 blue: 0.127 alpha:1.0];
     
     NSDateFormatter *f = [NSDateFormatter new];
     [f setCalendar:[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian]];
@@ -52,29 +46,7 @@
     self.navigationItem.titleView = label;
 }
 
--(void) prepareButtons {
-    [_fisrt setFrame:CGRectMake(_fisrt.frame.origin.x, _fisrt.frame.origin.y, self.view.frame.size.width/2, _fisrt.frame.size.height)];
-    [_second setFrame:CGRectMake(_second.frame.origin.x, _second.frame.origin.y, self.view.frame.size.width/2, _second.frame.size.height)];
-    
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.fisrt.bounds byRoundingCorners:(UIRectCornerTopLeft |  UIRectCornerTopRight) cornerRadii:CGSizeMake(10.0, 10.0)];
-     UIBezierPath *maskPath1 = [UIBezierPath bezierPathWithRoundedRect:self.second.bounds byRoundingCorners:(UIRectCornerTopLeft |  UIRectCornerTopRight) cornerRadii:CGSizeMake(10.0, 10.0)];
-    CAShapeLayer *borderLayer = [[CAShapeLayer alloc] init];
-    borderLayer.frame = CGRectMake(0.0, 0.0, self.fisrt.frame.size.width, self.fisrt.frame.size.height-1.0);
-   // self.fisrt.bounds;
-    borderLayer.path  = maskPath.CGPath;
-    borderLayer.lineWidth   = 1.0f;
-    borderLayer.strokeColor = [UIColor colorWithRed:110.0/255.0 green:111.0/255.0 blue: 111.0/255.0 alpha:1.0].CGColor;
-    borderLayer.fillColor   = [UIColor whiteColor].CGColor;
-    
-    [self.fisrt.layer addSublayer:borderLayer];
-    CAShapeLayer *borderLayer1 = [[CAShapeLayer alloc] init];
-    [borderLayer1 setFrame:CGRectMake(0.0, 0.0, self.second.frame.size.width, self.second.frame.size.height-1.0)];
-    [borderLayer1 setPath:maskPath1.CGPath];
-    borderLayer1.fillColor   = [UIColor whiteColor].CGColor;
-    borderLayer1.strokeColor = [UIColor colorWithRed:110.0/255.0 green:111.0/255.0 blue: 111.0/255.0 alpha:1.0].CGColor;
-    borderLayer1.lineWidth   = 1.0f;
-    [self.second.layer addSublayer:borderLayer1];
-}
+
 
 -(void) viewWillAppear:(BOOL)animated{
     NSDate *now = [NSDate date];
@@ -84,33 +56,21 @@
     [_second setTitle:[NSString stringWithFormat: @"%lu за %@", _user.returnSumOfLastOutcomes, [formatter stringFromDate:now]] forState:UIControlStateNormal];
     [_all setTitle:[NSString stringWithFormat: @"%lu", _user.returnSum] forState:UIControlStateNormal];
     [self.table reloadData];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self prepareNavigationTitle];
-   // [self prepareButtons];
-
-    
     key = 0;
+    _user = [User returnSingleton];
     
-_user = [User returnSingleton];
-    
+}
+- (IBAction)touch:(UIButton *)sender {
+    key = (int)sender.tag;
+    [self.table reloadData];
 }
 
--(IBAction)pressed0:(id)sender {
-    key = 0;
-    [self.table reloadData];
-}
--(IBAction)pressed1:(id)sender {
-    key = 1;
-    [self.table reloadData];
-}
--(IBAction)pressed2:(id)sender {
-    key = 2;
-    [self.table reloadData];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -133,7 +93,6 @@ _user = [User returnSingleton];
             break;
     }
     
-    //Record *record = ([[NSArray arrayWithArray:_recordsIncome] arrayByAddingObjectsFromArray:_recordsOutcome])[indexPath.row];
     cell.date.text = record.date;
     
     [cell.category setImage:record.category.image];
@@ -176,8 +135,8 @@ _user = [User returnSingleton];
         detailController.user = _user;
     }
     
-        AddViewController *avc = (AddViewController*)segue.destinationViewController;
-        avc.user = _user;
+    AddViewController *avc = (AddViewController*)segue.destinationViewController;
+    avc.user = _user;
     if ([segue.identifier isEqualToString:@"segueIncome"]) {
         avc.key = 1;
     }
@@ -185,29 +144,10 @@ _user = [User returnSingleton];
         avc.key = 2;
     }
     
-
+    
     
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    Record *record = nil;
-//    switch (key) {
-//        case 1:
-//            record = self.recordsIncome[indexPath.row];
-//            break;
-//        case 2:
-//            record = self.recordsOutcome[indexPath.row];
-//            break;
-//        default:
-//            record = self.records[indexPath.row];
-//            break;
-//    }
-//    DetailViewController *detailController = [[DetailViewController alloc] init];
-//    detailController.record = record;
-//    AppDelegate *del = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [del.navigationController pushViewController:nextViewController animated:YES];
-//}
 
 
 @end

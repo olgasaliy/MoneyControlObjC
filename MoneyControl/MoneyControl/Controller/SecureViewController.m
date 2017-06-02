@@ -16,23 +16,9 @@
     BOOL logged;
 }
 
-@property FirstViewController *f;
-
-
 @end
 
 @implementation SecureViewController
-
-//-(void) launchFromRoot {
-//    // grab our storyboard
-//    
-//    
-//    // instantiate our navigation controller
-//    UINavigationController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
-//    
-//    // make the nav controller visible
-//    [self presentViewController:controller animated:YES completion:nil];
-//}
 
 -(void) viewDidAppear:(BOOL)animated{
     [self touchId];
@@ -41,65 +27,55 @@
 -(void) touchId {
     LAContext *context = [[LAContext alloc] init];
     NSError *error = nil;
-            NSString *reason = @"Please authenticate using TouchID.";
+    NSString *reason = @"Авторизуйтесь с помощью TouchID.";
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-        
-                [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                        localizedReason:reason
-                                  reply:^(BOOL success, NSError *error) {
-                                      if (success) {
-                                          NSLog(@"Auth was OK");
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              if (logged) {
-                                                  
-                                                  [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated:YES completion:nil];
-                                              } else {
-                                                  NSLog(@"Controller");
-                                                  [self presentViewController:_f animated:NO completion:nil];
-                                              }
-                                          });
-               
-                                          
-                                      }
-                                      else {
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                                  message:error.description
-                                                                                                 delegate:self
-                                                                                        cancelButtonTitle:@"OK"
-                                                                                        otherButtonTitles:nil, nil];
-                                              [alertView show];
-                                              
-                                          });
-                                          NSLog(@"Error received: %@", error);
-                                      }
-                                  }];
-            }
-            else {
-                if (logged) {
-                    
-                    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated:YES completion:nil];
-                } else {
-                    NSLog(@"Controller");
-                    [self presentViewController:_f animated:NO completion:nil];
-                }
-                NSLog(@"Can not evaluate Touch ID");
-            }
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                localizedReason:reason
+                          reply:^(BOOL success, NSError *error) {
+                              if (success) {
+                                  NSLog(@"Авторизация прошла успешно");
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      [self ifLoggedGoTo];
+                                  });
+                              }
+                              else {
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      
+                                      UIAlertController*alert = [UIAlertController alertControllerWithTitle:@"Ошибка"
+                                                                                                    message:error.description
+                                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                                      
+                                      UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                                            handler:nil];
+                                      [alert addAction:defaultAction];
+                                      [self presentViewController:alert animated:YES completion:nil];
+                                  });
+                                  NSLog(@"Error received: %@", error);
+                              }
+                          }];
+    } else {
+        //если touchid недоступно
+        [self ifLoggedGoTo];
+        NSLog(@"Can not evaluate Touch ID");
+    }
+    
+    
+}
 
-
+-(void) ifLoggedGoTo {
+    if (logged) {
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated:YES completion:nil];
+    } else {
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:NO completion:nil];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-//    dispatch_async(queue, ^(void) {
-        _f =[self.storyboard instantiateViewControllerWithIdentifier:@"login"];
-        if (((User*)[User returnSingleton]).name)
-            logged = YES;
-        else logged = NO;
-//    });
-    // Do any additional setup after loading the view.
+    if (((User*)[User returnSingleton]).name)
+        logged = YES;
+    else logged = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,13 +84,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

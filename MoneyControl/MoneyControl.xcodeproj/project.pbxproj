@@ -55,16 +55,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC0CA97A1EBA683F00FF3C03 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
-		CC0CA97B1EBA68F700FF3C03 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		CC0CA97A1EBA683F00FF3C03 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = ../MyCell.h; sourceTree = "<group>"; };
+		CC0CA97B1EBA68F700FF3C03 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = ../MyCell.m; sourceTree = "<group>"; };
 		CC1626161E9CD8D3008C58E5 /* MoneyControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC16261A1E9CD8D4008C58E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC16261C1E9CD8D4008C58E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC16261D1E9CD8D4008C58E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CC1626251E9CD8D4008C58E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC16262A1E9CD8D5008C58E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC20C7921EC38D960075241C /* CellForCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellForCategory.h; sourceTree = "<group>"; };
-		CC20C7931EC38D970075241C /* CellForCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellForCategory.m; sourceTree = "<group>"; };
+		CC20C7921EC38D960075241C /* CellForCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellForCategory.h; path = ../CellForCategory.h; sourceTree = "<group>"; };
+		CC20C7931EC38D970075241C /* CellForCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellForCategory.m; path = ../CellForCategory.m; sourceTree = "<group>"; };
 		CC34DC151EE188A400CAAFAB /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		CC34DC161EE188A400CAAFAB /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		CC34DC171EE188A400CAAFAB /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
@@ -173,10 +173,6 @@
 				CC34DC3A1EE188A400CAAFAB /* View */,
 				CC16261C1E9CD8D4008C58E5 /* AppDelegate.h */,
 				CC16261D1E9CD8D4008C58E5 /* AppDelegate.m */,
-				CC0CA97A1EBA683F00FF3C03 /* MyCell.h */,
-				CC0CA97B1EBA68F700FF3C03 /* MyCell.m */,
-				CC20C7921EC38D960075241C /* CellForCategory.h */,
-				CC20C7931EC38D970075241C /* CellForCategory.m */,
 				CC1626251E9CD8D4008C58E5 /* Assets.xcassets */,
 				CC495EAD1ED4281400A65BB2 /* GoogleService-Info.plist */,
 				CC16262A1E9CD8D5008C58E5 /* Info.plist */,
@@ -252,6 +248,10 @@
 		CC34DC3A1EE188A400CAAFAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC0CA97A1EBA683F00FF3C03 /* MyCell.h */,
+				CC0CA97B1EBA68F700FF3C03 /* MyCell.m */,
+				CC20C7921EC38D960075241C /* CellForCategory.h */,
+				CC20C7931EC38D970075241C /* CellForCategory.m */,
 				CC34DC3B1EE188A400CAAFAB /* LaunchScreen.storyboard */,
 				CC34DC3C1EE188A400CAAFAB /* Main.storyboard */,
 			);
