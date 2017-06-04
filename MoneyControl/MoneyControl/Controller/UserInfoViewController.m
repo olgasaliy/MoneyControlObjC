@@ -9,6 +9,8 @@
 #import "UserInfoViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "User.h"
+#import "FacebookManager.h"
+#import "GoogleManager.h"
 #import <GoogleSignIn/GoogleSignIn.h>
 
 @interface UserInfoViewController ()
@@ -22,8 +24,8 @@
 
 -(IBAction)logOutUser:(id)sender {
     if (_myUser.key == 1)
-        [FBSDKAccessToken setCurrentAccessToken:nil];
-    else [[GIDSignIn sharedInstance] signOut];
+        [FacebookManager logOut];
+    else [GoogleManager logOut];
     [self.myUser  clearInfo];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

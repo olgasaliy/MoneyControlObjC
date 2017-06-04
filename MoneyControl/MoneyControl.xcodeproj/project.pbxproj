@@ -32,6 +32,10 @@
 		CC34DC4E1EE188A400CAAFAB /* ArrayOfCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */; };
 		CC34DC4F1EE188A400CAAFAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC34DC3B1EE188A400CAAFAB /* LaunchScreen.storyboard */; };
 		CC34DC501EE188A400CAAFAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC34DC3C1EE188A400CAAFAB /* Main.storyboard */; };
+		CC34DC531EE18C6A00CAAFAB /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */; };
+		CC34DC561EE18D0700CAAFAB /* GoogleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC551EE18D0700CAAFAB /* GoogleManager.m */; };
+		CC45A70B1EE4922700FF13AE /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC45A7091EE4922700FF13AE /* coreData.xcdatamodeld */; };
+		CC45A70D1EE49E9B00FF13AE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC45A70C1EE49E9B00FF13AE /* CoreData.framework */; };
 		CC495EA41ED4273700A65BB2 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495E9F1ED4273700A65BB2 /* GoogleAppUtilities.framework */; };
 		CC495EA51ED4273700A65BB2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC495EA01ED4273700A65BB2 /* GoogleSignIn.bundle */; };
 		CC495EA61ED4273700A65BB2 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EA11ED4273700A65BB2 /* GoogleSignIn.framework */; };
@@ -103,6 +107,12 @@
 		CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayOfCategories.m; sourceTree = "<group>"; };
 		CC34DC3B1EE188A400CAAFAB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC34DC3C1EE188A400CAAFAB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CC34DC511EE18C6A00CAAFAB /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
+		CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
+		CC34DC541EE18D0700CAAFAB /* GoogleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleManager.h; sourceTree = "<group>"; };
+		CC34DC551EE18D0700CAAFAB /* GoogleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleManager.m; sourceTree = "<group>"; };
+		CC45A70A1EE4922700FF13AE /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
+		CC45A70C1EE49E9B00FF13AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CC495E9F1ED4273700A65BB2 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
 		CC495EA01ED4273700A65BB2 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		CC495EA11ED4273700A65BB2 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
@@ -130,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC45A70D1EE49E9B00FF13AE /* CoreData.framework in Frameworks */,
 				CC495EB81ED4A61400A65BB2 /* LocalAuthentication.framework in Frameworks */,
 				CC495EAC1ED4277B00A65BB2 /* SystemConfiguration.framework in Frameworks */,
 				CC495EAA1ED4277100A65BB2 /* SafariServices.framework in Frameworks */,
@@ -233,6 +244,9 @@
 		CC34DC311EE188A400CAAFAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC34DC541EE18D0700CAAFAB /* GoogleManager.h */,
+				CC34DC551EE18D0700CAAFAB /* GoogleManager.m */,
+				CC45A7091EE4922700FF13AE /* coreData.xcdatamodeld */,
 				CC34DC321EE188A400CAAFAB /* MyCategory.h */,
 				CC34DC331EE188A400CAAFAB /* MyCategory.m */,
 				CC34DC341EE188A400CAAFAB /* Record.h */,
@@ -241,6 +255,8 @@
 				CC34DC371EE188A400CAAFAB /* User.m */,
 				CC34DC381EE188A400CAAFAB /* ArrayOfCategories.h */,
 				CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */,
+				CC34DC511EE18C6A00CAAFAB /* FacebookManager.h */,
+				CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +277,7 @@
 		CCE1C9B91ED3546900663F6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC45A70C1EE49E9B00FF13AE /* CoreData.framework */,
 				CC71EEED1ED71CC100575643 /* AccountKit.framework */,
 				CC71EEEE1ED71CC100575643 /* Bolts.framework */,
 				CC71EEEF1ED71CC100575643 /* FBSDKCoreKit.framework */,
@@ -360,6 +377,7 @@
 			files = (
 				CC34DC4A1EE188A400CAAFAB /* ViewController.m in Sources */,
 				CC34DC481EE188A400CAAFAB /* SettingsTableViewController.m in Sources */,
+				CC34DC561EE18D0700CAAFAB /* GoogleManager.m in Sources */,
 				CC34DC3D1EE188A400CAAFAB /* UserInfoViewController.m in Sources */,
 				CC34DC431EE188A400CAAFAB /* NavViewController.m in Sources */,
 				CC34DC401EE188A400CAAFAB /* DescriptionViewController.m in Sources */,
@@ -378,8 +396,10 @@
 				CC34DC421EE188A400CAAFAB /* FirstViewController.m in Sources */,
 				CC34DC441EE188A400CAAFAB /* PhotoViewController.m in Sources */,
 				CC34DC3F1EE188A400CAAFAB /* CategoriesTableViewController.m in Sources */,
+				CC34DC531EE18C6A00CAAFAB /* FacebookManager.m in Sources */,
 				CC34DC4E1EE188A400CAAFAB /* ArrayOfCategories.m in Sources */,
 				CC16261B1E9CD8D4008C58E5 /* main.m in Sources */,
+				CC45A70B1EE4922700FF13AE /* coreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +560,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC45A7091EE4922700FF13AE /* coreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC45A70A1EE4922700FF13AE /* coreData.xcdatamodel */,
+			);
+			currentVersion = CC45A70A1EE4922700FF13AE /* coreData.xcdatamodel */;
+			path = coreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC16260E1E9CD8D3008C58E5 /* Project object */;
 }

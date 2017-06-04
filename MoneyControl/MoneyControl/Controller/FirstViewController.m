@@ -11,11 +11,11 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <AccountKit/AccountKit.h>
 #import <GoogleSignIn/GoogleSignIn.h>
+#import "GoogleManager.h"
+#import "FacebookManager.h"
 #import "User.h"
 
-@interface FirstViewController ()<GIDSignInUIDelegate> {
-    dispatch_queue_t queue;
-}
+@interface FirstViewController ()<GIDSignInUIDelegate>
 
 @property IBOutlet FBSDKLoginButton * loginButton;
 
@@ -29,31 +29,11 @@
 - (void)signIn:(GIDSignIn *)signIn
 didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
-    User *myUser = [User returnSingleton];
-    [myUser clearInfo];
-    queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^(void) {
-        myUser.name = user.profile.name;
-        myUser.email = user.profile.email;
-        if ([GIDSignIn sharedInstance].currentUser.profile.hasImage)
-        {
-            NSUInteger dimension = round(240 * [[UIScreen mainScreen] scale]);
-            NSURL *imageURL = [user.profile imageURLWithDimension:dimension];
-            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-            UIImage *ggImage = [UIImage imageWithData:imageData];
-            myUser.img = ggImage;
-        }
-        myUser.key = 2;
-        [myUser saveInfo];
-    });
-    
+    [GoogleManager signIn:signIn didSignInForUser:user withError:error];
     [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated: YES completion: nil];
-    // ...
+
 }
 
-- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error {
-    
-}
 
 // Present a view that prompts the user to sign in with Google
 - (void)signIn:(GIDSignIn *)signIn
@@ -63,8 +43,6 @@ didSignInForUser:(GIDGoogleUser *)user
 
 
 - (IBAction)gg:(id)sender {
-    [GIDSignIn sharedInstance].delegate=self;
-    [GIDSignIn sharedInstance].uiDelegate=self;
     [[GIDSignIn sharedInstance] signIn];
 }
 
@@ -88,12 +66,10 @@ didSignInForUser:(GIDGoogleUser *)user
 
             [alert addAction:defaultAction];
             [self presentViewController:alert animated:YES completion:nil];
-        }
-        else
-        {
+        } else {
             if(result.token)   // This means if There is current access token.
             {
-                [self getInfo];
+                [FacebookManager getInfo];
                 [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated: YES completion: nil];
             }
             NSLog(@"Login Cancel");
@@ -101,42 +77,8 @@ didSignInForUser:(GIDGoogleUser *)user
     }];
 }
 
--(void) getInfo{
-                    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
-                                                       parameters:@{@"fields": @"id, email, picture.width(240).height(240), name"}]
-                     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id userinfo, NSError *error) {
-                         if (!error) {
-    
-    
-                             queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-                             dispatch_async(queue, ^(void) {
-    
-                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                     NSString *name = [userinfo objectForKey:@"name"];
-                                     NSString *email = [userinfo objectForKey:@"email"];
-                                     NSString *imageStringOfLoginUser = [[[userinfo valueForKey:@"picture"] valueForKey:@"data"] valueForKey:@"url"];
-                                     NSURL *url = [NSURL URLWithString: imageStringOfLoginUser];
-                                     NSData *imageData = [NSData dataWithContentsOfURL:url];
-                                     UIImage *fbImage = [UIImage imageWithData:imageData];
-                                     User *user = [User returnSingleton];
-                                     [user clearInfo];
-                                     user.name = name;
-                                     user.email = email;
-                                     user.img = fbImage;
-                                     user.key = 1;
-                                     [user saveInfo];
-                                     // you are authorised and can access user data from user info object
-    
-                                 });
-                             });
-    
-                         }
-                         else{
-    
-                             NSLog(@"%@", [error localizedDescription]);
-                         }
-                     }];
-}
+
+
 -(IBAction)pressedSkip:(id)sender {
     [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"nav"] animated: YES completion: nil];
 }
@@ -148,9 +90,9 @@ didSignInForUser:(GIDGoogleUser *)user
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"viewdidload");
-//    _loginButton  = [[FBSDKLoginButton alloc] init];
-//    _loginButton.hidden = YES;
-    // Do any additional setup after loading the view.
+    [GIDSignIn sharedInstance].delegate=self;
+    [GIDSignIn sharedInstance].uiDelegate=self;
+
 }
 
 

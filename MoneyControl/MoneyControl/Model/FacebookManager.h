@@ -10,4 +10,7 @@
 
 @interface FacebookManager : NSObject
 
++(void) getInfo;
++(void)logOut;
+
 @end

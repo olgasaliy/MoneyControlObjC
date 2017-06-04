@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+#import "User.h"
 
-@interface GoogleManager : NSObject
+@interface GoogleManager : NSObject 
+
++(void) signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error;
++(void) logOut;
 
 @end
