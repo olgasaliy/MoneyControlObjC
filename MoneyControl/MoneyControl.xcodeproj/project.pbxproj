@@ -32,23 +32,11 @@
 		CC34DC4E1EE188A400CAAFAB /* ArrayOfCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */; };
 		CC34DC4F1EE188A400CAAFAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC34DC3B1EE188A400CAAFAB /* LaunchScreen.storyboard */; };
 		CC34DC501EE188A400CAAFAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC34DC3C1EE188A400CAAFAB /* Main.storyboard */; };
-		CC34DC531EE18C6A00CAAFAB /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */; };
-		CC34DC561EE18D0700CAAFAB /* GoogleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34DC551EE18D0700CAAFAB /* GoogleManager.m */; };
-		CC495EA41ED4273700A65BB2 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495E9F1ED4273700A65BB2 /* GoogleAppUtilities.framework */; };
-		CC495EA51ED4273700A65BB2 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC495EA01ED4273700A65BB2 /* GoogleSignIn.bundle */; };
-		CC495EA61ED4273700A65BB2 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EA11ED4273700A65BB2 /* GoogleSignIn.framework */; };
-		CC495EA71ED4273700A65BB2 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EA21ED4273700A65BB2 /* GoogleSignInDependencies.framework */; };
-		CC495EA81ED4273700A65BB2 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EA31ED4273700A65BB2 /* GoogleSymbolUtilities.framework */; };
+		CC45A7401EE55FEC00FF13AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC45A73F1EE55FEC00FF13AE /* GoogleService-Info.plist */; };
 		CC495EAA1ED4277100A65BB2 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EA91ED4277100A65BB2 /* SafariServices.framework */; };
 		CC495EAC1ED4277B00A65BB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EAB1ED4277B00A65BB2 /* SystemConfiguration.framework */; };
-		CC495EAE1ED4281400A65BB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC495EAD1ED4281400A65BB2 /* GoogleService-Info.plist */; };
 		CC495EB01ED4877E00A65BB2 /* gg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC495EAF1ED4877E00A65BB2 /* gg.png */; };
 		CC495EB81ED4A61400A65BB2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC495EB71ED4A61400A65BB2 /* LocalAuthentication.framework */; };
-		CC71EEF21ED71CC100575643 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71EEED1ED71CC100575643 /* AccountKit.framework */; };
-		CC71EEF31ED71CC100575643 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71EEEE1ED71CC100575643 /* Bolts.framework */; };
-		CC71EEF41ED71CC100575643 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71EEEF1ED71CC100575643 /* FBSDKCoreKit.framework */; };
-		CC71EEF51ED71CC100575643 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71EEF01ED71CC100575643 /* FBSDKLoginKit.framework */; };
-		CC71EEF61ED71CC100575643 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC71EEF11ED71CC100575643 /* FBSDKShareKit.framework */; };
 		CC9CE28B1ECC8F4D00BDC91E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = CC9CE28A1ECC8F4D00BDC91E /* photo.png */; };
 		CCE1C9A81ED0568200663F6D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE1C9A71ED0568200663F6D /* plus.png */; };
 		CCE1C9AD1ED31DA400663F6D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CCE1C9AC1ED31DA400663F6D /* logo.png */; };
@@ -105,26 +93,11 @@
 		CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayOfCategories.m; sourceTree = "<group>"; };
 		CC34DC3B1EE188A400CAAFAB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC34DC3C1EE188A400CAAFAB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CC34DC511EE18C6A00CAAFAB /* FacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookManager.h; sourceTree = "<group>"; };
-		CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookManager.m; sourceTree = "<group>"; };
-		CC34DC541EE18D0700CAAFAB /* GoogleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleManager.h; sourceTree = "<group>"; };
-		CC34DC551EE18D0700CAAFAB /* GoogleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleManager.m; sourceTree = "<group>"; };
-		CC45A70C1EE49E9B00FF13AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CC495E9F1ED4273700A65BB2 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
-		CC495EA01ED4273700A65BB2 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
-		CC495EA11ED4273700A65BB2 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
-		CC495EA21ED4273700A65BB2 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
-		CC495EA31ED4273700A65BB2 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		CC45A73F1EE55FEC00FF13AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC495EA91ED4277100A65BB2 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		CC495EAB1ED4277B00A65BB2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CC495EAD1ED4281400A65BB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC495EAF1ED4877E00A65BB2 /* gg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gg.png; sourceTree = "<group>"; };
 		CC495EB71ED4A61400A65BB2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		CC71EEED1ED71CC100575643 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
-		CC71EEEE1ED71CC100575643 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		CC71EEEF1ED71CC100575643 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		CC71EEF01ED71CC100575643 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		CC71EEF11ED71CC100575643 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		CC9CE28A1ECC8F4D00BDC91E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		CCE1C9A71ED0568200663F6D /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		CCE1C9AC1ED31DA400663F6D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -140,15 +113,6 @@
 				CC495EB81ED4A61400A65BB2 /* LocalAuthentication.framework in Frameworks */,
 				CC495EAC1ED4277B00A65BB2 /* SystemConfiguration.framework in Frameworks */,
 				CC495EAA1ED4277100A65BB2 /* SafariServices.framework in Frameworks */,
-				CC495EA81ED4273700A65BB2 /* GoogleSymbolUtilities.framework in Frameworks */,
-				CC495EA61ED4273700A65BB2 /* GoogleSignIn.framework in Frameworks */,
-				CC71EEF41ED71CC100575643 /* FBSDKCoreKit.framework in Frameworks */,
-				CC71EEF21ED71CC100575643 /* AccountKit.framework in Frameworks */,
-				CC71EEF31ED71CC100575643 /* Bolts.framework in Frameworks */,
-				CC71EEF61ED71CC100575643 /* FBSDKShareKit.framework in Frameworks */,
-				CC71EEF51ED71CC100575643 /* FBSDKLoginKit.framework in Frameworks */,
-				CC495EA41ED4273700A65BB2 /* GoogleAppUtilities.framework in Frameworks */,
-				CC495EA71ED4273700A65BB2 /* GoogleSignInDependencies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +144,8 @@
 				CC34DC3A1EE188A400CAAFAB /* View */,
 				CC16261C1E9CD8D4008C58E5 /* AppDelegate.h */,
 				CC16261D1E9CD8D4008C58E5 /* AppDelegate.m */,
+				CC45A73F1EE55FEC00FF13AE /* GoogleService-Info.plist */,
 				CC1626251E9CD8D4008C58E5 /* Assets.xcassets */,
-				CC495EAD1ED4281400A65BB2 /* GoogleService-Info.plist */,
 				CC16262A1E9CD8D5008C58E5 /* Info.plist */,
 				CC1626191E9CD8D4008C58E5 /* Supporting Files */,
 			);
@@ -240,8 +204,6 @@
 		CC34DC311EE188A400CAAFAB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC34DC541EE18D0700CAAFAB /* GoogleManager.h */,
-				CC34DC551EE18D0700CAAFAB /* GoogleManager.m */,
 				CC34DC321EE188A400CAAFAB /* MyCategory.h */,
 				CC34DC331EE188A400CAAFAB /* MyCategory.m */,
 				CC34DC341EE188A400CAAFAB /* Record.h */,
@@ -250,8 +212,6 @@
 				CC34DC371EE188A400CAAFAB /* User.m */,
 				CC34DC381EE188A400CAAFAB /* ArrayOfCategories.h */,
 				CC34DC391EE188A400CAAFAB /* ArrayOfCategories.m */,
-				CC34DC511EE18C6A00CAAFAB /* FacebookManager.h */,
-				CC34DC521EE18C6A00CAAFAB /* FacebookManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,20 +232,9 @@
 		CCE1C9B91ED3546900663F6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CC45A70C1EE49E9B00FF13AE /* CoreData.framework */,
-				CC71EEED1ED71CC100575643 /* AccountKit.framework */,
-				CC71EEEE1ED71CC100575643 /* Bolts.framework */,
-				CC71EEEF1ED71CC100575643 /* FBSDKCoreKit.framework */,
-				CC71EEF01ED71CC100575643 /* FBSDKLoginKit.framework */,
-				CC71EEF11ED71CC100575643 /* FBSDKShareKit.framework */,
 				CC495EB71ED4A61400A65BB2 /* LocalAuthentication.framework */,
 				CC495EAB1ED4277B00A65BB2 /* SystemConfiguration.framework */,
 				CC495EA91ED4277100A65BB2 /* SafariServices.framework */,
-				CC495E9F1ED4273700A65BB2 /* GoogleAppUtilities.framework */,
-				CC495EA01ED4273700A65BB2 /* GoogleSignIn.bundle */,
-				CC495EA11ED4273700A65BB2 /* GoogleSignIn.framework */,
-				CC495EA21ED4273700A65BB2 /* GoogleSignInDependencies.framework */,
-				CC495EA31ED4273700A65BB2 /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,10 +303,9 @@
 				CC9CE28B1ECC8F4D00BDC91E /* photo.png in Resources */,
 				CC34DC501EE188A400CAAFAB /* Main.storyboard in Resources */,
 				CCE1C9B01ED3207500663F6D /* fb.png in Resources */,
-				CC495EAE1ED4281400A65BB2 /* GoogleService-Info.plist in Resources */,
 				CC1626261E9CD8D4008C58E5 /* Assets.xcassets in Resources */,
-				CC495EA51ED4273700A65BB2 /* GoogleSignIn.bundle in Resources */,
 				CCE1C9A81ED0568200663F6D /* plus.png in Resources */,
+				CC45A7401EE55FEC00FF13AE /* GoogleService-Info.plist in Resources */,
 				CC34DC4F1EE188A400CAAFAB /* LaunchScreen.storyboard in Resources */,
 				CC495EB01ED4877E00A65BB2 /* gg.png in Resources */,
 			);
@@ -372,7 +320,6 @@
 			files = (
 				CC34DC4A1EE188A400CAAFAB /* ViewController.m in Sources */,
 				CC34DC481EE188A400CAAFAB /* SettingsTableViewController.m in Sources */,
-				CC34DC561EE18D0700CAAFAB /* GoogleManager.m in Sources */,
 				CC34DC3D1EE188A400CAAFAB /* UserInfoViewController.m in Sources */,
 				CC34DC431EE188A400CAAFAB /* NavViewController.m in Sources */,
 				CC34DC401EE188A400CAAFAB /* DescriptionViewController.m in Sources */,
@@ -391,7 +338,6 @@
 				CC34DC421EE188A400CAAFAB /* FirstViewController.m in Sources */,
 				CC34DC441EE188A400CAAFAB /* PhotoViewController.m in Sources */,
 				CC34DC3F1EE188A400CAAFAB /* CategoriesTableViewController.m in Sources */,
-				CC34DC531EE18C6A00CAAFAB /* FacebookManager.m in Sources */,
 				CC34DC4E1EE188A400CAAFAB /* ArrayOfCategories.m in Sources */,
 				CC16261B1E9CD8D4008C58E5 /* main.m in Sources */,
 			);

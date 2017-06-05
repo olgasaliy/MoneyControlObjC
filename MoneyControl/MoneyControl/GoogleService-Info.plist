@@ -2,27 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>521958499656-vti6b4069k1afeoa7ucu8ipgo2ntb2ob.apps.googleusercontent.com	</string>
+	<string>780454325779-p7p6lbudk2p5s7f7ck22q2rpv85p5b3r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.521958499656-vti6b4069k1afeoa7ucu8ipgo2ntb2ob</string>
+	<string>com.googleusercontent.apps.780454325779-p7p6lbudk2p5s7f7ck22q2rpv85p5b3r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBX6nQgc4iLPFIts9yAHj_j-fDqg5TZud8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>780454325779</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>study.MoneyControl</string>
 	<key>PROJECT_ID</key>
-	<string>moneycontrol-8e064</string>
+	<string>moneycotrol</string>
+	<key>STORAGE_BUCKET</key>
+	<string>moneycotrol.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:521958499656:ios:9aabc39e3f566fe2</string>
+	<string>1:780454325779:ios:9aabc39e3f566fe2</string>
+	<key>DATABASE_URL</key>
+	<string>https://moneycotrol.firebaseio.com</string>
 </dict>
 </plist>

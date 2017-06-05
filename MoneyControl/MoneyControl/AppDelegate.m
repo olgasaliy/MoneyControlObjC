@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "AddViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "SecureViewController.h"
 #import "User.h"
 
@@ -96,15 +95,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //google
-    NSError* configureError;
-    [GIDSignIn sharedInstance].clientID = @"521958499656-vti6b4069k1afeoa7ucu8ipgo2ntb2ob.apps.googleusercontent.com";
-    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
-    
-    
-    //FB
-    [[FBSDKApplicationDelegate sharedInstance] application:application
-                             didFinishLaunchingWithOptions:launchOptions];
+//    //google
+//    NSError* configureError;
+//    [GIDSignIn sharedInstance].clientID = @"521958499656-vti6b4069k1afeoa7ucu8ipgo2ntb2ob.apps.googleusercontent.com";
+//    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+//    
+//    
+//    //FB
+//    [[FBSDKApplicationDelegate sharedInstance] application:application
+//                             didFinishLaunchingWithOptions:launchOptions];
 
     [self createItemsWithIcons];
     
@@ -138,20 +137,20 @@
 
 
 
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     
-    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                                  openURL:url
-                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
-                    ];
-    BOOL handled1 = [[GIDSignIn sharedInstance] handleURL:url
-                                                    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                                                           annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
-    return handled || handled1;
-}
+//    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                                                  openURL:url
+//                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+//                    ];
+//    BOOL handled1 = [[GIDSignIn sharedInstance] handleURL:url
+//                                                    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//                                                           annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+//    return handled || handled1;
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -171,7 +170,7 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [FBSDKAppEvents activateApp];
+   // [FBSDKAppEvents activateApp];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

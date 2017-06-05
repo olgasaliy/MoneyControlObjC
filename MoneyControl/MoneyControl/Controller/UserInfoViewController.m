@@ -9,9 +9,8 @@
 #import "UserInfoViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "User.h"
-#import "FacebookManager.h"
-#import "GoogleManager.h"
-#import <GoogleSignIn/GoogleSignIn.h>
+
+
 
 @interface UserInfoViewController ()
 @property (strong, nonatomic) User *myUser;
@@ -23,9 +22,9 @@
 @implementation UserInfoViewController
 
 -(IBAction)logOutUser:(id)sender {
-    if (_myUser.key == 1)
-        [FacebookManager logOut];
-    else [GoogleManager logOut];
+//    if (_myUser.key == 1)
+//        [FacebookManager logOut];
+//    else [GoogleManager logOut];
     [self.myUser  clearInfo];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -40,10 +39,7 @@
     [self.navigationItem setRightBarButtonItem:barButton];
 
     [self.navigationItem.titleView setHidden:YES];
-//    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2 - 25,self.view.frame.size.height/2 - 25,50,50)];
-//    spinner.color = [UIColor blackColor];
-//    [spinner startAnimating];
-//    [self.view addSubview:spinner];
+
     _myUser = [User returnSingleton];
     if (_myUser.name){
         [self.photo setImage: _myUser.img];
